@@ -1,4 +1,5 @@
 import React,{useState} from "react"
+import styles from '../src/main.css'
 
 const tabelaIMC=()=>{
   return(
@@ -96,13 +97,14 @@ function App() {
 
 
   return (
-    <>
+    <div className="container">
+      <h1>Calculadora de IMC</h1>
       {formpeso(peso, setPeso)}
       {formAltura(altura, setAltura)}
       {calculaImc(peso, altura, setResultado)}
       {fresultado(resultado)}
       {tabelaIMC()}
-      </>
+      </div>
   )
 }
 
